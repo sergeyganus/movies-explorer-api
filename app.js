@@ -9,12 +9,13 @@ const limiter = require('./middlewares/limiter');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 const errorHandler = require('./middlewares/errorHandler');
 const router = require('./routes/index');
+const { DEV_DB_URL } = require('./utils/constants');
 
-const { PORT = 3000 } = process.env;
+const { NODE_ENV, PORT = 3000, DB_URL } = process.env;
 
 const app = express();
 
-mongoose.connect('mongodb://127.0.0.1:27017/bitfilmsdb')
+mongoose.connect(NODE_ENV === 'production' ? DB_URL : DEV_DB_URL)
   .then(() => console.log('БД подключена'))
   .catch((err) => console.log(`Произошла ошибка: ${err.message}`));
 
