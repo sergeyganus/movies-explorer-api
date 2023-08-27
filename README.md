@@ -19,3 +19,4 @@
 
 ## Ссылка на сервер
 
+https://api.creative.movies.nomoredomainsicu.ru
