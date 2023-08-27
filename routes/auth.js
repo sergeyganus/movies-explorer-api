@@ -1,6 +1,6 @@
 const { celebrate, Joi } = require('celebrate');
 const router = require('express').Router();
-const { createUser, login, logout } = require('../controllers/auth');
+const { createUser, login } = require('../controllers/auth');
 const { emailRegExp } = require('../utils/regexps');
 
 router.post('/signup', celebrate({
@@ -17,7 +17,5 @@ router.post('/signin', celebrate({
     password: Joi.string().required().min(8),
   }),
 }), login);
-
-router.post('/signout', logout);
 
 module.exports = router;
