@@ -18,4 +18,5 @@
 `npm run dev` — запускает сервер с hot-reload
 
 ## Ссылка на сервер
-Здесь будет ссылка на домен с API
+
+https://api.creative.movies.nomoredomainsicu.ru
