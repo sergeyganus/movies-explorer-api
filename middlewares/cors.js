@@ -1,4 +1,6 @@
 const allowedCors = [
+  'https://creative.movies.nomoredomainsicu.ru',
+  'http://creative.movies.nomoredomainsicu.ru',
   'http://localhost:3000',
   'http://localhost:3001',
 ];

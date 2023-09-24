@@ -59,7 +59,7 @@ module.exports.login = (req, res, next) => {
       res
         .status(OK_STATUS_CODE)
         .cookie('jwt', `Bearer ${token}`, {
-          maxAge: 3600000,
+          maxAge: 3600000 * 24 * 2,
           httpOnly: true,
         })
         .send({ message: `Пользователь ${email} успешно авторизован!` });
